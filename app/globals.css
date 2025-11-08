@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-primary font-mono antialiased;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(212, 255, 61, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 10px #D4FF3D, 0 0 20px #D4FF3D, 0 0 30px #D4FF3D;
+  }
+  
+  .glow-border {
+    box-shadow: 0 0 5px #D4FF3D, 0 0 10px #D4FF3D;
+  }
+  
+  .terminal-line {
+    @apply border-l-2 border-neon-lime pl-4;
+  }
+  
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(212, 255, 61, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 255, 61, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+/* Custom cursor for FAQ */
+.faq-item:hover {
+  cursor: crosshair;
+}
+
