@@ -10,7 +10,7 @@ export default function PortalDashboard({ userData }: { userData: any }) {
   useEffect(() => {
     // Simulate signal updates
     const interval = setInterval(() => {
-      setSignal(prev => prev + Math.floor(Math.random() * 2))
+      setSignal((prev: number) => prev + Math.floor(Math.random() * 2))
     }, 5000)
 
     return () => clearInterval(interval)
